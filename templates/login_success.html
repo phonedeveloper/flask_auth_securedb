@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <div id="login_success">
+    Login successful!
+    {% if user_id %}
+      <br />
+      User ID: {{user_id}}
+    {% endif %}
+    {% if status_code %}
+      <br />
+      Response code: {{status_code}}
+    {% endif %}
+    {% if content %}
+      <br />
+      Response message:<br />
+      {{content}}
+    {% endif %}
+  </div>
+{% endblock %}
+

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <div id="login_fail">
+    Login failed, please <a href="/">try again</a>.
+    {% if status_code %}
+      <br />
+      Response code: {{status_code}}
+    {% endif %}
+    {% if content %}
+      <br />
+      Response message:<br />
+      {{content}}
+    {% endif %}
+  </div>
+{% endblock %}
+
